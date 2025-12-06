@@ -1,15 +1,16 @@
 # Ejemplo de Abstracción aplicado al clima
 
-# La Clase Clima representa lo esencial.
+# La Clase Clima representa lo esencial: una temperatura y un estado general
 class Clima:
-
-    def __init__(self, estado, temperatura):
-        self.estado = estado
+    def __init__(self, temperatura, estado):
         self.temperatura = temperatura
+        self.estado = estado
 
-    def describir(self):
-        print(f"El clima está {self.estado} con una temperatura de {self.temperatura}°C")
+    # Método que muestra la información del clima
+    def mostrar_info(self):
+        print(f"La temperatura es {self.temperatura}°C y el clima está {self.estado}.")
 
-# Crear un objeto
-mi_clima = Clima("soleado", 28)
-mi_clima.describir()
+clima_hoy = Clima(28, "soleado")
+
+# Mostramos lo esencial del clima
+clima_hoy.mostrar_info()
