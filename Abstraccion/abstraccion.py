@@ -1,29 +1,15 @@
 # Ejemplo de Abstracción aplicado al clima
 
-from abc import ABC, abstractmethod
+# La Clase Clima representa lo esencial.
+class Clima:
 
-class Clima(ABC):
-    @abstractmethod
-    def descripcion(self):
-        # Método que cada tipo de clima deberá escribir a su manera
-        pass
+    def __init__(self, estado, temperatura):
+        self.estado = estado
+        self.temperatura = temperatura
 
+    def describir(self):
+        print(f"El clima está {self.estado} con una temperatura de {self.temperatura}°C")
 
-# Clima real: soleado
-class Soleado(Clima):
-    def descripcion(self):
-        return "El día está soleado"
-
-
-# Clima real: lluvioso
-class Lluvioso(Clima):
-    def descripcion(self):
-        return "El día está lluvioso"
-
-
-# Uso del modelo
-c1 = Soleado()
-c2 = Lluvioso()
-
-print(c1.descripcion())
-print(c2.descripcion())
+# Crear un objeto
+mi_clima = Clima("soleado", 28)
+mi_clima.describir()
