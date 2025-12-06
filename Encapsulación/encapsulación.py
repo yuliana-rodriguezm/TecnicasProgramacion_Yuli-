@@ -18,8 +18,10 @@ class SensorClima:
 # Uso del encapsulamiento
 sensor = SensorClima(25)
 print("Temperatura actual:", sensor.obtener_temperatura())
+
 # Actualizamos a un valor válido
 sensor.actualizar_temperatura(32)
 print("Temperatura actualizada:", sensor.obtener_temperatura())
+
 # Agregamos un valor fuera de rango
-sensor.actualizar_temperatura(51)  # No permitido
+sensor.actualizar_temperatura(51)
